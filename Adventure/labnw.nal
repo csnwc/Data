@@ -1,0 +1,28 @@
+{
+
+   PRINT $NW
+   
+   IN2STR ( $A , $B )
+   FILE "munge.nal"
+
+   IFEQUAL ( $VA , "MOVE" ) {
+      IFEQUAL ( $B , "SOUTH" ) {
+         FILE "labsw.nal"
+      }
+   }
+
+   IFEQUAL ( $VA , "MOVE" ) {
+      IFEQUAL ( $B , "EAST" ) {
+         FILE "labne.nal"
+      }
+   }
+
+   IFEQUAL ( $VA , "LOOK" ) {
+      IFEQUAL ( $B , "POSTER" ) {
+         PRINT $NWREAD
+      }
+   }
+
+   JUMP 3
+
+}

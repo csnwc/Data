@@ -1,0 +1,10 @@
+{
+
+   $A = "Neill"
+   %E = 12.4 
+
+   IFEQUAL ( $A , #Arvyy# ) {
+      PRINT #Uryyb Jbeyq!#
+   }
+
+}

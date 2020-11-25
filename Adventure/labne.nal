@@ -1,0 +1,26 @@
+{
+
+   PRINT $NE
+   
+   IN2STR ( $A , $B )
+   FILE "munge.nal"
+
+   IFEQUAL ( $VA , "MOVE" ) {
+      IFEQUAL ( $B , "SOUTH" ) {
+         FILE "labse.nal"
+      }
+      PRINT $NECANTGO
+      JUMP 3
+   }
+
+   IFEQUAL ( $VA , "TALK" ) {
+      IFEQUAL ( $VB , "NEILL" ) {
+         PRINT $NEILL
+         %TALKEDNEILL = 1
+         JUMP 3
+      }
+   }
+
+   JUMP 3
+
+}

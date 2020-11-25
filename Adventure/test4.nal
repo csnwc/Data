@@ -1,0 +1,5 @@
+{
+   PRINT "In test4, before"
+   FILE "test1.nal"
+   PRINT "In test4, after"
+}

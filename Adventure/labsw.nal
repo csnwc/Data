@@ -1,0 +1,62 @@
+{
+
+   PRINTN $SW
+   IFEQUAL ( $WHERECHEK , "SW" ) {
+      PRINT $SWCHEKSW
+   }
+   IFEQUAL ( $WHERECHEK , "SE" ) {
+      PRINT $SWCHEKSE
+   }
+   
+   IN2STR ( $A , $B )
+   FILE "munge.nal"
+
+   IFEQUAL ( $VA , "MOVE" ) {
+      IFEQUAL ( $B , "EAST" ) {
+         FILE "labse.nal"
+      }
+   }
+
+   IFEQUAL ( $VA , "MOVE" ) {
+      IFEQUAL ( $B , "NORTH" ) {
+         IFEQUAL ( %LIGHTON , 0 ) {
+            PRINT $SWLIGHTSOFF
+            JUMP 23
+         }
+         IFEQUAL ( %LIGHTON , 1 ) {
+            FILE "labnw.nal"
+         }
+      }
+   }
+
+   IFEQUAL ( $VA , "MOVE" ) {
+      PRINT "You can't go that way ?"
+      JUMP 23
+   }
+
+   IFEQUAL ( $VA , "TALK" ) {
+      IFEQUAL ( $VB , "CARL" ) {
+         PRINT $SWCHEKNOTCHATTY
+         JUMP 23
+      }
+   }
+
+   IFEQUAL ( $VA , "ACTION" ) {
+      IFEQUAL ( $VB , "SWITCH" ) {
+         IFEQUAL ( $WHERECHEK , "SE" ) {
+            %LIGHTON = 1
+            PRINT $SWLIGHTSON
+         }
+         IFEQUAL ( $WHERECHEK , "SW" ) {
+            PRINT $SWBLOCKED
+         }
+      }
+      IFEQUAL ( $VB , "BIKE" ) {
+         PRINT $SWNOBIKE
+      }
+      JUMP 23
+   }
+
+   JUMP 3
+
+}

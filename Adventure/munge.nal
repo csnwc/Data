@@ -1,0 +1,135 @@
+{
+
+   $VA = "NONE"
+   $VB = "NONE"
+   IFEQUAL ( $A , "MOVE" ) {
+      $VA = "MOVE"
+   }
+   IFEQUAL ( $A , "WALK" ) {
+      $VA = "MOVE"
+   }
+   IFEQUAL ( $A , "RUN" ) {
+      $VA = "MOVE"
+   }
+   IFEQUAL ( $A , "GO" ) {
+      $VA = "MOVE"
+   }
+
+   IFEQUAL ( $A , "STEAL" ) {
+      $VA = "ACTION"
+   }
+   IFEQUAL ( $A , "RIDE" ) {
+      $VA = "ACTION"
+   }
+   IFEQUAL ( $A , "HIT" ) {
+      $VA = "ACTION"
+   }
+   IFEQUAL ( $A , "ON" ) {
+      $VA = "ACTION"
+   }
+   IFEQUAL ( $A , "SIT" ) {
+      $VA = "ACTION"
+   }
+   IFEQUAL ( $A , "PUSH" ) {
+      $VA = "ACTION"
+   }
+   IFEQUAL ( $A , "TOUCH" ) {
+      $VA = "ACTION"
+   }
+   IFEQUAL ( $A , "KICK" ) {
+      $VA = "ACTION"
+   }
+   IFEQUAL ( $A , "SWITCH" ) {
+      $VA = "ACTION"
+   }
+   IFEQUAL ( $A , "TYPE" ) {
+      $VA = "ACTION"
+   }
+   IFEQUAL ( $A , "PRESS" ) {
+      $VA = "ACTION"
+   }
+
+   IFEQUAL ( $A , "TALK" ) {
+      $VA = "TALK"
+   }
+   IFEQUAL ( $A , "CHAT" ) {
+      $VA = "TALK"
+   }
+   IFEQUAL ( $A , "SPEAK" ) {
+      $VA = "TALK"
+   }
+   IFEQUAL ( $A , "ASK" ) {
+      $VA = "TALK"
+   }
+
+   IFEQUAL ( $A , "LOOK" ) {
+      $VA = "LOOK"
+   }
+   IFEQUAL ( $A , "READ" ) {
+      $VA = "LOOK"
+   }
+   IFEQUAL ( $A , "INSPECT" ) {
+      $VA = "LOOK"
+   }
+
+   IFEQUAL ( $B , "BIKE" ) {
+      $VB = "BIKE"
+   }
+   IFEQUAL ( $B , "BICYCLE" ) {
+      $VB = "BIKE"
+   }
+   IFEQUAL ( $B , "CYCLE" ) {
+      $VB = "BIKE"
+   }
+
+   IFEQUAL ( $B , "SWITCH" ) {
+      $VB  = "SWITCH"
+   }
+   IFEQUAL ( $B , "LIGHT" ) {
+      $VB  = "SWITCH"
+   }
+   IFEQUAL ( $B , "ON" ) {
+      $VB  = "SWITCH"
+   }
+
+   IFEQUAL ( $B , "POSTER" ) {
+      $VB = "POSTER"
+   }
+
+   IFEQUAL ( $B , "NORTH" ) {
+      $VB = "COMPASS"
+   }
+   IFEQUAL ( $B , "SOUTH" ) {
+      $VB = "COMPASS"
+   }
+   IFEQUAL ( $B , "WEST" ) {
+      $VB = "COMPASS"
+   }
+   IFEQUAL ( $B , "EAST" ) {
+      $VB = "COMPASS"
+   }
+
+   IFEQUAL ( $B , "NEILL" ) {
+      $VB = "NEILL"
+   }
+   IFEQUAL ( $B , "CARL" ) {
+      $VB = "CARL"
+   }
+   IFEQUAL ( $B , #2393# ) {
+      $VB = #2393#
+   }
+   IFEQUAL ( $B , "2393" ) {
+      $VB = "2393"
+   }
+
+   IFEQUAL ( $VA , "NONE" ) {
+      PRINTN "I don't understand"
+      PRINT $A
+   }
+   IFEQUAL ( $VB , "NONE" ) {
+      PRINTN "What do you mean by"
+      PRINTN $B
+      PRINT "?"
+   }
+
+}

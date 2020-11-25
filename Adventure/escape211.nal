@@ -1,0 +1,42 @@
+{
+   $SW = "You're in the south-west corner of 2.11 Other parts of the lab lay to the North and East."
+   $SWCHEKSW = "Carl's in here, relaxing and leaning against a wall. It looks like he may be obscuring something, but you can't see what it is."
+   $SWCHEKSE = "Carl has  gone. You can see a light switch that was previously obscured. Looks like it's been switched off accidentally."
+   $SWLIGHTSON = "You can see the north-east corner of the lab now that the lights are on !"
+   $SWLIGHTSOFF = "To the north of you it's too dark to see what's going on - you don't want to go there - you might meet one of the evil core dumps which hang around in places you least expect them!"
+   $SWBLOCKED = "Carl is standing there blocking you !"
+   $SWCHEKNOTCHATTY = "Carl's too deeply in thought about the most recent cricket match to talk to you now."
+   $SWNOBIKE = "There's no bike here ?"
+
+   $NW = "You're in the north-west corner of the lab. It's nice and bright in here, someone has switched the lights on. Other parts of the lab lay to the South and East. There's a poster hanging on the wall; it has something written on it."
+   $NWREAD = "The poster says 'WANT TO ESCAPE ? JUST DIAL QUIT'. I wonder, is that a clue ?"
+
+   $SE = "You're in the south-east corner of the lab. Other parts of the lab lay to the West and North."
+   $SELOCKED = "There's a door to the south, but it has a pinpad and is locked. You'd need to type a 4-digit code to escape."
+   $SEOPEN = "The door is open now, and you could move through it."
+   $BIKESOLO = "Carl's shiny bike is stood here. The bike is the thing Carl loves the most in the world, even more than assembly language, snus and old Amigas ! I hope no-one messes with it."
+   $SECHEKSE = "Carl and his bike are stood here."
+   $SETOUCH = "There's a strangely Swedish cry, and Carl comes running in at speed shouting 'Stop - keep off my beautiful bike'"
+   $SEROT = "Ooh dear - a poor understanding of rot18 there :-("
+   $SWCHEKNOTCHATTY = "Carl would normally talk to you, but he's still upset about you abusing his bike !"
+
+   $NE = "You're in the north-east corner of 2.11. Looks like you can go West and South from here. Neill's there at a computer, coding something but looking pensive. Maybe you should talk to him ?"
+   $NECANTGO = "There's a line of chairs across the lab blocking your way."
+   $NEILL = "Neill says ''I'm writing a program that converts a string into it's phonepad equivalent - you know, how 1-800-NEILL is really the number 1-800-63455 ... Maybe it could become part of an adventure game or something ?''" 
+
+   $FOYER = "You've escaped, congratulations ! You step outside and you see Simon Lock. He starts waving a Java textbook at you and saying 'Get back inside the Coding Prison!'"
+
+   %LIGHTON = 0
+   %LOCKED = 1
+   $WHERECHEK = "SW"
+   %TALKEDNEILL = 0
+
+   PRINT ""
+   PRINT "Welcome to this adventure game : try typing things like :"
+   PRINT "GO NORTH"
+   PRINT "TALK CARL"
+   PRINT ""
+
+   FILE "labsw.nal"
+   
+}

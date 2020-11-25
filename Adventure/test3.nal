@@ -1,0 +1,4 @@
+{
+   PRINT "Warning : Infinite Loop !"
+   JUMP 1
+}

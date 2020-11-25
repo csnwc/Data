@@ -1,0 +1,25 @@
+         Engineering Test Page         1
+                                       2
+            /dDouble Height            /s3
+            /dDouble Height            /s4
+ASCII:                                /w5
+  /rRed     abcdefghijklmnopqrstuvwxyz /w6
+  /gGreen   ABCDEFGHIJKLMNOPQRSTUVWXYZ /w7
+  /yYellow  0123456789                 /w8
+  /mMagenta !"#$%&*();',.//+-=:@<>?     /w9
+Non-Ascii:                            /w0
+  /bFractions={\} Arrows=[]^ Div=~     /w1
+  /cBar=| Pound=_ Hyphen=` Block=/5     /w2
+                                      /w3
+  /c/N/r   Simple Background Colour     /K/w4
+                                       5
+/c/dCyan/rMix/b/N/cBack/K/y/N/gStripe/K/w/sABC/dEFG/s 6
+/c/dCyan/gMix/b/N/cBack/K/g/N/yStripe/K/w/dABC EF*/s 7
+                                       8
+ /Wppppppppp/W/#ppppppppppppp  /W/5/H/R/G/Y/B/M/C/E/w9
+ /W5/wsolid/Wj/W/#5/wSeparated/#j /w Rainbow   0
+ /W#########/W/##############  /W/5/H/R/G/Y/B/M/C/E/w1
+                                       2
+    /glowercase in alphanumeric mode/w   3
+    /Glowercase in alphanumeric mode/w   4
+ /M,s,s,/5@[\BLAST THROUGH TEXT]^_5,s,s,/w5

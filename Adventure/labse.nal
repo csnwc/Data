@@ -1,0 +1,87 @@
+{
+
+   PRINTN $SE
+   IFEQUAL ( %LOCKED , 1 ) {
+      PRINTN $SELOCKED
+   }
+   IFEQUAL ( %LOCKED , 0 ) {
+      PRINTN $SEOPEN
+   }
+
+   IFEQUAL ( $WHERECHEK , "SE" ) {
+      PRINT $SECHEKSE
+   }
+   IFEQUAL ( $WHERECHEK , "SW" ) {
+      PRINT $BIKESOLO
+   }
+   
+   IN2STR ( $A , $B )
+   FILE "munge.nal"
+
+   IFEQUAL ( $VA , "MOVE" ) {
+      IFEQUAL ( $B , "WEST" ) {
+         FILE "labsw.nal"
+         JUMP 43
+      }
+   }
+
+   IFEQUAL ( $VA , "MOVE" ) {
+      IFEQUAL ( $B , "NORTH" ) {
+         FILE "labne.nal"
+         JUMP 43
+      }
+   }
+
+   IFEQUAL ( $VA , "MOVE" ) {
+      IFEQUAL ( $B , "SOUTH" ) {
+         IFEQUAL ( %LOCKED , 1 ) {
+            PRINT $SELOCKED
+            JUMP 43
+         }
+         IFEQUAL ( %LOCKED , 0 ) {
+            PRINT ""
+            PRINT $FOYER
+            PRINT ""
+            FILE "escape211.nal"
+         }
+      }
+   }
+ 
+   IFEQUAL ( $VA , "MOVE" ) {
+      PRINT "You can't go that way ?"
+      JUMP 43
+   }
+
+   IFEQUAL ( $VA , "ACTION" ) {
+      IFEQUAL ( $VB , "BIKE" ) {
+         PRINT $SETOUCH
+         $WHERECHEK = "SE"
+      }
+      IFEQUAL ( $VB , #2393# ) {
+         IFEQUAL ( %LIGHTON , 1 ) {
+            PRINT $SEOPEN
+            %LOCKED = 0
+         }
+      }
+      IFEQUAL ( $VB , "2393" ) {
+         PRINT $SEROT
+      }
+      JUMP 43
+   }
+
+   IFEQUAL ( $VA , "TALK" ) {
+      IFEQUAL ( $VB , "CARL" ) {
+         IFEQUAL ( $WHERECHEK , "SE" ) {
+            PRINT $SECHEKNOTCHATTY
+            JUMP 43
+         }
+         IFEQUAL ( $WHERECHEK , "SW" ) {
+            PRINT "He's not here ?"
+            JUMP 43
+         }
+      }
+   }
+
+   JUMP 3
+
+}

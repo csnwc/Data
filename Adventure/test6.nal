@@ -1,0 +1,29 @@
+{
+
+   PRINT "I'm thinking of a number (0-99).\nCan you guess it?"
+   RND ( %MINE )
+   %CNT = 0 
+
+   INC ( %CNT )
+   PRINT "Type in your guess"
+   INNUM ( %GUESS )
+   IFGREATER ( %CNT , 7 ) {
+      PRINT #Gbb znal gevrf :-(#
+      ABORT
+   }
+   IFGREATER ( %GUESS , %MINE ) {
+      PRINT "Too Big ! Try again ... "
+      JUMP 10
+   }
+   IFGREATER ( %MINE , %GUESS ) {
+      PRINT "Too Small ! Try again ... "
+      JUMP 10
+   }
+   IFEQUAL ( %MINE , %GUESS ) {
+      PRINT #Lbh thrffrq pbeerpgyl, lbh jva :-)#
+      PRINTN "Number of goes = "
+      PRINT %CNT
+      ABORT
+   }
+
+}
