@@ -4,6 +4,7 @@
 int main(void)
 {
 
+
    bool b;
    char str[1000];
    boolarr* ba;
