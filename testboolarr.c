@@ -1,11 +1,13 @@
 #include "specific.h"
 #include "boolarr.h"
 
+#define BIGSTR 1000
+
 int main(void)
 {
 
    bool b;
-   char str[1000];
+   char str[BIGSTR];
    boolarr* ba;
    boolarr* bb;
    boolarr* bc;
