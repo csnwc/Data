@@ -31,8 +31,9 @@ int main(void)
    assert(boolarr_get(ba, 0, &b));
    assert(!b);
    assert(boolarr_set(ba, 5, true));
+   assert(boolarr_set(ba, 6, false));
    assert(boolarr_tostring(ba, str));
-   assert(strcmp(str, "100010")==0);
+   assert(strcmp(str, "0100010")==0);
 
    assert(boolarr_set(ba, 0, true));
    assert(boolarr_set(ba, 127, true));
