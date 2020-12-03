@@ -1,5 +1,7 @@
-#include "specific.h"
 #include "boolarr.h"
+#include "specific.h"
+#include <string.h>
+
 
 int main(void)
 {
