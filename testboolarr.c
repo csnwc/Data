@@ -1,10 +1,13 @@
-#include "specific.h"
 #include "boolarr.h"
+#include "specific.h"
+#include <string.h>
+
 
 #define BIGSTR 1000
 
 int main(void)
 {
+
 
    bool b;
    char str[BIGSTR];
