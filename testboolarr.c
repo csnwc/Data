@@ -14,6 +14,7 @@ int main(void)
    boolarr* ba;
    boolarr* bb;
    boolarr* bc;
+   boolarr* bd;
    unsigned int i;
    bool b2;
 
@@ -81,6 +82,8 @@ int main(void)
    assert(boolarr_issame(bc, bc));
    assert(boolarr_issame(ba, bc));
    assert(boolarr_issame(bc, ba));
+   bd = boolarr_init();
+   assert(!boolarr_issame(bc, bd));
 
    assert(boolarr_set(bc, 0, false));
    assert(boolarr_get(bc, 0, &b));
