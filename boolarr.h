@@ -1,5 +1,5 @@
-/* Boolean(Bit) Array/Vector
-   Little-endian: LSB 1 */
+/* Boolean(Bit) Array
+   Little-endian: LSB */
 
 #include "../../ADTs/General/general.h"
 
