@@ -4,7 +4,7 @@ DEBUG= -g3
 SANITIZE= $(COMMON) -fsanitize=undefined -fsanitize=address $(DEBUG)
 VALGRIND= $(COMMON) $(DEBUG)
 PRODUCTION= $(COMMON) -O3
-LDLIBS =
+LDLIBS = -lm
 
 testrealloc : assoc.h Realloc/specific.h Realloc/realloc.c testassoc.c ../../ADTs/General/general.h ../../ADTs/General/general.c
 	$(CC) testassoc.c Realloc/realloc.c ../../ADTs/General/general.c -o testrealloc -I./Realloc $(PRODUCTION) $(LDLIBS)
