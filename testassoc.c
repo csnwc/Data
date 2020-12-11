@@ -1,7 +1,6 @@
 #include "specific.h"
 #include "assoc.h"
 
-#define ARRSIZE 15
 #define WORDS 370119
 #define NUMRANGE 100000
 
