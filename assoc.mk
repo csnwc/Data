@@ -9,6 +9,7 @@ LDLIBS =
 testrealloc : assoc.h Realloc/specific.h Realloc/realloc.c testassoc.c ../../ADTs/General/general.h ../../ADTs/General/general.c
 	$(CC) testassoc.c Realloc/realloc.c ../../ADTs/General/general.c -o testrealloc -I./Realloc $(PRODUCTION) $(LDLIBS)
 
+# Only build one version of testassoc2.c ...
 testrealloc2 : assoc.h Realloc/specific.h Realloc/realloc.c testassoc2.c ../../ADTs/General/general.h ../../ADTs/General/general.c
 	$(CC) testassoc2.c Realloc/realloc.c ../../ADTs/General/general.c -o testrealloc2 -I./Realloc $(PRODUCTION) $(LDLIBS)
 
