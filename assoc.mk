@@ -4,10 +4,13 @@ DEBUG= -g3
 SANITIZE= $(COMMON) -fsanitize=undefined -fsanitize=address $(DEBUG)
 VALGRIND= $(COMMON) $(DEBUG)
 PRODUCTION= $(COMMON) -O3
-LDLIBS = -lm
+LDLIBS =
 
 testrealloc : assoc.h Realloc/specific.h Realloc/realloc.c testassoc.c ../../ADTs/General/general.h ../../ADTs/General/general.c
 	$(CC) testassoc.c Realloc/realloc.c ../../ADTs/General/general.c -o testrealloc -I./Realloc $(PRODUCTION) $(LDLIBS)
+
+testrealloc2 : assoc.h Realloc/specific.h Realloc/realloc.c testassoc2.c ../../ADTs/General/general.h ../../ADTs/General/general.c
+	$(CC) testassoc2.c Realloc/realloc.c ../../ADTs/General/general.c -o testrealloc2 -I./Realloc $(PRODUCTION) $(LDLIBS)
 
 testrealloc_s : assoc.h Realloc/specific.h Realloc/realloc.c testassoc.c ../../ADTs/General/general.h ../../ADTs/General/general.c
 	$(CC) testassoc.c Realloc/realloc.c ../../ADTs/General/general.c -o testrealloc_s -I./Realloc $(SANITIZE) $(LDLIBS)
@@ -25,7 +28,7 @@ testcuckoo : assoc.h Cuckoo/specific.h Cuckoo/cuckoo.c testassoc.c ../../ADTs/Ge
 	$(CC) testassoc.c Cuckoo/cuckoo.c ../../ADTs/General/general.c -o testcuckoo -I./Cuckoo $(PRODUCTION) $(LDLIBS)
 
 clean:
-	rm -f testrealloc_s testrealloc_v testrealloc testcuckoo_s testcuckoo_v testcuckoo
+	rm -f testrealloc_s testrealloc_v testrealloc testcuckoo_s testcuckoo_v testcuckoo testrealloc2
 
 basic: testrealloc_s testrealloc_v
 	./testrealloc_s
@@ -34,3 +37,6 @@ basic: testrealloc_s testrealloc_v
 cuckoo: testcuckoo_s testcuckoo_v
 	./testcuckoo_s
 	valgrind ./testcuckoo_v
+
+extra:	testrealloc2
+	./testrealloc2
