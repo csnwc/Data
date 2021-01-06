@@ -4,8 +4,6 @@
 #define WORDS 500000
 #define WORDLEN 50
 
-char* strduprev(char* str);
-
 #define FNAMELEN 100
 
 #define STRINGKEY 0
@@ -57,22 +55,4 @@ int add_dictionary(assoc** b, char* fname, char words[WORDS][WORDLEN])
    fclose(fp);
    *b = a;
    return i;
-}
-
-
-/* Make a copy, reversed */
-char* strduprev(char* str)
-{
-   int i, j;
-   char* t;
-   j = strlen(str);
-   t = ncalloc(j+1, 1); /* Add null char */
-   strcpy(t, str);
-   for(i=0, j--; i<j; i++,j--){
-      /* Swap using bit-twiddling */
-      t[i] ^= t[j];
-      t[j] ^= t[i];
-      t[i] ^= t[j];
-   }
-   return t;
 }
