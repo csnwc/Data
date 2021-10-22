@@ -17,10 +17,8 @@ demo_neillncurses : neillncurses.c neillncurses.h demo_neillncurses.c
 demo_neillsdl2: demo_neillsdl2.c neillsdl2.c neillsdl2.h
 	$(CC) demo_neillsdl2.c neillsdl2.c -o demo_neillsdl2 $(COMMON) $(SDLCFLAGS) $(SDLLIBS) $(LDLIBS)
 
-testrealloc_s : boolarr.h Realloc/specific.h Realloc/realloc.c testboolarr.c ../../ADTs/General
-/general.h ../../ADTs/General/general.c
-        $(CC) testboolarr.c Realloc/realloc.c ../../ADTs/General/general.c -o testrealloc_s -I.
-/Realloc $(SANITIZE) $(LDLIBS)
+testrealloc_s : boolarr.h Realloc/specific.h Realloc/realloc.c testboolarr.c ../../ADTs/General/general.h ../../ADTs/General/general.c
+	$(CC) testboolarr.c Realloc/realloc.c ../../ADTs/General/general.c -o testrealloc_s -I./Realloc $(SANITIZE) $(LDLIBS)
 
 clean:
 	rm -fr demo_neillsimplescreen demo_neillncurses demo_neillsdl2
