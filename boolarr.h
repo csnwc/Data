@@ -1,11 +1,15 @@
-/* Boolean(Bit) Array
-   Little-endian: LSB */
+
+/* Boolean(Bit) Array/Vector
+   Little-endian: LSB  */
+
+#pragma once 
 
 #include "../../ADTs/General/general.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <stdbool.h>
 
 typedef enum logicalop {or, and, xor} logicalop;
 
