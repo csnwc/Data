@@ -1,4 +1,4 @@
-<PROG> ::= BEGIN "{" <INSTRCLIST>
+<PROG> ::= "BEGIN" "{" <INSTRCLIST>
 
 <INSTRCLIST> ::= "}" | <INSTRC> <INSTRCLIST>
 <INSTRC> ::= <PRINT> | <SET> | <CREATE> | <LOOP>
@@ -36,8 +36,8 @@ strings can't have spaces in them (for simplicity)
 
 # Create an array full of ones, or read from a file
 <CREATE> ::= "ONES" <ROWS> <COLS> <VARNAME> | "READ" <FILENAME> <VARNAME>
-<ROW> ::= <INTEGER>
-<COL> ::= <INTEGER>
+<ROWS> ::= <INTEGER>
+<COLS> ::= <INTEGER>
 <FILENAME> ::= <STRING>
 
 # Loop using a variable to count from 1 (!) to <= <INTEGER>
