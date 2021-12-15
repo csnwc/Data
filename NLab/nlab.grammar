@@ -7,20 +7,20 @@
 <PRINT> ::= "PRINT" <VARNAME> | "PRINT" <STRING>
 
 # One of the 26 possible (upper-case) variables
-<VARNAME> ::= $[A-Z]     % e.g. $A, $B, $Z etc.
+<VARNAME> ::= "$"[A-Z]     # e.g. $A, $B, $Z etc.
 
 # Because of the assumption that a program is just a list of words,
 strings can't have spaces in them (for simplicity)
 <STRING> :: Double-quoted string e.g. "../../doof.arr", "Hello!" etc.
 
-<SET> ::= <VARNAME> ":=" <POLISHLIST>
+<SET> ::= "SET" <VARNAME> ":=" <POLISHLIST>
 <POLISHLIST> ::= <POLISH><POLISHLIST>  | ";"
 
 <POLISH> ::= <PUSHDOWN> | <UNARYOP> | <BINARYOP>
 <PUSHDOWN> ::== <VARNAME> | <INTEGER>
 
 # A non-negative integer
-<INTEGER> ::= [0-9]+    % e.g. 1, 250,  3
+<INTEGER> ::= [0-9]+    # e.g. 1, 250,  3
 
 # Pop one array, push the result.
 # U-NOT : Flip the Boolean values of an array
