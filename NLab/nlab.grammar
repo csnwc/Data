@@ -32,7 +32,7 @@ strings can't have spaces in them (for simplicity)
 # If both arrays are bigger than 1x1, they must be the same size
 # If one array is a 1x1 scalar, apply this value to each cell of the other array in turn
 # B-TIMES operates on corresponding cells in turn (it is not a full matrix multiplication).
-<BINARYOP> :: "B-AND" | "B-OR" | "B-GREATER" | "B-LESS" | "B-ADD" | "B-TIMES" | "B-EQUAL"
+<BINARYOP> :: "B-AND" | "B-OR" | "B-GREATER" | "B-LESS" | "B-ADD" | "B-TIMES" | "B-EQUALS"
 
 # Create an array full of ones, or read from a file
 <CREATE> ::= "ONES" <ROWS> <COLS> <VARNAME> | "READ" <FILENAME> <VARNAME>
