@@ -1,9 +1,0 @@
-{
-   FD 300
-   DO A FROM 200 TO 0 {
-      LT A
-      SET B := A 3 * ;
-      FD B
-   }
-}
-
